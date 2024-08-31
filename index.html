@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Kombat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .hamster {
+            width: 100px;
+            height: 100px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Benvenuto a Hamster Kombat!</h1>
+        <p>Punteggio: <span id="score">0</span></p>
+        <div id="hamster" class="hamster">Hamster</div>
+        <button id="attackButton">Attacca!</button>
+    </div>
+    <script>
+        let score = 0;
+        document.getElementById('attackButton').addEventListener('click', () => {
+            score++;
+            document.getElementById('score').innerText = score;
+        });
+    </script>
+</body>
+</html>
